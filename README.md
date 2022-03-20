@@ -2,6 +2,8 @@
 
 This module converts a (ND)JSON stream to a messagepack stream on-the-fly.
 
+[See package documentation](https://pkg.go.dev/github.com/arivum/json2msgpackStreamer)
+
 ## How to use
 
 ```go
