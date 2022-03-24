@@ -1,5 +1,12 @@
 # json2msgpackStreamer
 
+
+![](https://img.shields.io/github/v/tag/arivum/json2msgpackStreamer?label=latest&color=%234488BB)
+![](https://img.shields.io/github/go-mod/go-version/arivum/json2msgpackStreamer?color=%234488BB)
+![](https://img.shields.io/github/workflow/status/arivum/json2msgpackStreamer/Go)
+![](https://img.shields.io/github/license/arivum/json2msgpackStreamer?color=%234488BB)
+
+
 This module converts a (ND)JSON stream to a messagepack stream on-the-fly.
 
 [See package documentation](https://pkg.go.dev/github.com/arivum/json2msgpackStreamer)
