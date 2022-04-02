@@ -105,7 +105,7 @@ func (b *blockbuf) flushToWriter(w io.Writer) error {
 		index  int
 	)
 
-	for {
+	for iter != nil {
 		index = 0
 		for _, insert = range iter.insertions {
 			if _, err = w.Write(iter.buf[index:insert.pos]); err != nil {
@@ -123,9 +123,6 @@ func (b *blockbuf) flushToWriter(w io.Writer) error {
 			}
 		}
 
-		if iter.next == nil {
-			break
-		}
 		iter = iter.next
 	}
 	return nil
@@ -173,7 +170,7 @@ func (b *blockbuf) insertOnOffset(data []byte, pos *blockBufPos) {
 
 func newBlock() *block {
 	return &block{
-		buf:        make([]byte, bufsize),
+		buf:        [bufsize]byte{},
 		next:       nil,
 		index:      0,
 		insertions: make([]*blockInsertion, 0),

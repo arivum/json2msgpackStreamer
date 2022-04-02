@@ -21,7 +21,6 @@ var (
 )
 
 const (
-	bufsize              = 4 << 10
 	msgPackFlagFixStr    = byte(0xA0)
 	msgPackFlagStr8      = byte(0xd9)
 	msgPackFlagStr16     = byte(0xda)

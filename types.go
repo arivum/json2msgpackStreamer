@@ -12,6 +12,10 @@ import (
 	"io"
 )
 
+const (
+	bufsize = 4 << 10
+)
+
 type blockInsertion struct {
 	buf []byte
 	pos int
@@ -24,7 +28,7 @@ type blockbuf struct {
 
 type block struct {
 	next       *block
-	buf        []byte
+	buf        [bufsize]byte
 	index      int
 	insertions []*blockInsertion
 }
